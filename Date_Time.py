@@ -28,8 +28,7 @@ def get_time():
 
 
             if first_date <= second_date:
-
-                print("count=" ,count)
+                
                 print(f"The {th[count]} date has been reached! {first_date} now it's {second_date}")
             count +=1
 
