@@ -1,10 +1,12 @@
 import datetime
+
+import Ordinal_Numbers
+from Ordinal_Numbers import th
+
 def get_time():
     dates = input("How much data do you want to enter? ")
     count = 0
-    th = ["first","second","third","fourth","fifth","sixth","seventh","eighth","ninth","tenth",
-        "eleventh","twelfth","thirteenth","fourteenth","fifteenth","sixteenth","seventeenth","eighteenth","nineteenth","twentieth","twenty-first","twenty-second","twenty-third",
-        "twenty-fourth","twenty-fifth","twenty-sixth","twenty-seventh","twenty-eighth","twenty-ninth","thirtieth","thirty-first"]
+    th = Ordinal_Numbers.th
     while count <int(dates):
         try:
 
@@ -28,18 +30,20 @@ def get_time():
 
 
             if first_date <= second_date:
-                
-                print(f"The {th[count]} date has been reached! {first_date} now it's {second_date}")
+
+                print("count=" ,count)
+                return (f"The {th[count]} date has been reached! {first_date} now it's {second_date}")
             count +=1
 
 
+
         except:
-            print("Something you did wrong, pay attention to the format and type")
+            return ("Something you did wrong, pay attention to the format and type")
         count +=1
         count -= 1
-        print(count)
 
-get_time()
+
+print(get_time())
 
 
 
