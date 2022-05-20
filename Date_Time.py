@@ -1,7 +1,7 @@
 import datetime
 
 import Ordinal_Numbers
-from Ordinal_Numbers import th
+
 
 def get_time():
     dates = input("How much data do you want to enter? ")
